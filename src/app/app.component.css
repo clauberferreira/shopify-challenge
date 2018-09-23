@@ -1,0 +1,112 @@
+html{
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+header{
+    background-color: rgb(106, 66, 232);
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    left: 0;
+}
+
+header h1{
+    color: white;
+}
+
+input{
+    border-radius: 3px;
+    border-style: solid;
+    border-width: thin;
+    width: 100%;
+    padding: 10px;
+}
+
+div[class="searcharea"] a{
+    background-color: rgb(106, 66, 232);
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+	text-align: center;
+}
+div[class="searcharea"] a:hover{
+	cursor: pointer;
+	background-color: rgb(171, 128, 235);
+}
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    margin-top: 72px;
+    padding-top: 20px;  
+}
+
+.repos{
+    width: 50%;
+    left: 0;
+}
+
+.favoriterepos{
+    background-color: rgb(243, 236, 254);
+    right: 0;
+}
+
+.rowaction{
+    text-align: right;
+}
+
+.resultheader{
+    font-weight: bold;
+}
+
+.resultarea {
+    display: grid;
+    grid-template-columns: 3fr 4fr 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+	grid-column-gap: 1%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.searcharea {
+    display: grid;
+    grid-template-columns: 14fr 30px 3fr;
+    grid-template-rows: 1fr;
+	padding: 0px 20px 20px 20px;
+}
+
+.errorMessages{
+    background-color: #FBE9E9;
+    border-color: #E05252;
+    border-left-style: solid;
+    border-left-width: thick;
+	margin: 0px 20px 20px 20px;
+}
+
+.errorMessages div {
+    padding: 5px;
+}
+
+.dont-break-out {
+
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+
+}

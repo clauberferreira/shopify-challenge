@@ -1,0 +1,43 @@
+<header>
+    <h1>My Github Favorites</h1>
+</header>
+<main>
+    <div class="split repos">
+        <div *ngIf="searchModel.invalid && searchMade" class="errorMessages">
+            <div>Search field is required.</div>
+        </div>
+        <div class="searcharea">
+            <input placeholder="Respository name" [(ngModel)]="search" (keydown.enter)="onSearch()" (ngModelChange)="onCleanSearch()" required #searchModel="ngModel"/>
+            <div></div>
+            <a (click)="onSearch()">Search</a>
+        </div>
+        <div class="resultarea">
+            <div class="resultheader">Name</div>
+            <div class="resultheader">Language</div>
+            <div class="resultheader">Latest tag</div>
+            <div class="resultheader"></div>
+        </div>
+        <br/>
+        <div *ngFor="let repository of repositories" class="resultarea dont-break-out">
+            <div>{{repository.name}}</div>
+            <div>{{repository.language}}</div>
+            <div>{{repository.latestTag}}</div>
+            <div *ngIf="!repository.favourited" class="rowaction"><a href="#" (click)="onAdd(repository)">Add</a></div>
+        </div>
+    </div>
+    <div class="split favoriterepos">
+        <div class="resultarea">
+            <div class="resultheader">Name</div>
+            <div class="resultheader">Language</div>
+            <div class="resultheader">Latest tag</div>
+            <div class="resultheader"> </div>
+        </div>
+        <br/>
+        <div *ngFor="let repositoryFav of repositoriesFav" class="resultarea">
+            <div>{{repositoryFav.name}}</div>
+            <div>{{repositoryFav.language}}</div>
+            <div>{{repositoryFav.latestTag}}</div>
+            <div class="rowaction"><a href="#" (click)="onRemove(repositoryFav)">Remove</a></div>
+        </div>
+    </div>
+</main>
