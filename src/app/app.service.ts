@@ -6,7 +6,7 @@ import { Observable, of } from 'rxjs';
 import { Repository } from './repository';
 
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Basic Y2xhdWJlci5mZXJyZWlyYUBnbWFpbC5jb206TG5sMDQzMztM' })
+  headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Bearer 03b2b18c693f66eeec30626d5487fb748047a76d' })
 };
 
 @Injectable({
